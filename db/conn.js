@@ -2,7 +2,7 @@ const { MongoClient } = require("mongodb");
 // const Db = process.env.ATLAS_URI;
 const USER = process.env.MONGO_USER;
 const PW = process.env.MONGO_PW;
-const Db = `mongodb+srv://${USER}:${PW}@cluster0.6rqvr.mongodb.net/employees?retryWrites=true&w=majority`;
+const Db = `mongodb+srv://${USER}:${PW}@cluster0.6rqvr.mongodb.net/uib?retryWrites=true&w=majority`;
 
 console.log(Db);
 
@@ -19,7 +19,7 @@ module.exports = {
       // Verify we got a good "db" object
       if (db)
       {
-        _db = db.db("employees");
+        _db = db.db("uib");
         console.log("Successfully connected to MongoDB."); 
       }
       return callback(err);
