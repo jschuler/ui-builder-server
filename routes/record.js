@@ -44,6 +44,7 @@ recordRoutes.route("/record/add").post(function (req, response) {
   };
   db_connect.collection("records").insertOne(myobj, function (err, res) {
     if (err) throw err;
+    console.log(res);
     response.json(res);
   });
 });
